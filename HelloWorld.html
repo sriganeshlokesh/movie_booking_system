@@ -1,0 +1,25 @@
+<html>
+
+<body>
+
+<button type="button">Click Me</button>
+<p></p>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+
+            $.ajax({
+                type: 'POST',
+                url: 'index.php',
+                success: function(data) {
+                    alert(data);
+                    $("p").text(data);
+
+                }
+            });
+   });
+});
+</script>
+
+</body>
+</html>

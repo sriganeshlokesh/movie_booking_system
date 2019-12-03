@@ -1,0 +1,99 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "dba123";
+$dbname = "myDB";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+    
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    
+} 
+?>
+<!DOCTYPE html>
+<html>
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+
+<form action="SignUpTest.php" style="border:1px solid #ccc">
+  <div class="container">
+    <label id="first">Name:</label><br/>
+<input type="text" class="form-control" placeholder="Name" name="name"><br/>
+      
+<label id="first"> User ID:</label><br/>
+<input type="text" class="form-control" placeholder="User ID" name="userid"><br/>
+
+<label id="first">Password:</label><br/>
+<input type="password" class="form-control" placeholder="Password" name="password"><br/>
+
+
+<label id="first">Email:</label><br/>
+<input type="text" class="form-control" placeholder="Email" name="email"><br/>
+    
+<label id="first">Phone Number:</label><br/>
+<input type="number" class="form-control" placeholder="Phone" name="phone"><br/>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
+
